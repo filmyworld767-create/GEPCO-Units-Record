@@ -1,0 +1,15 @@
+class Meter {
+  int? id;
+  String name;
+  String number;
+
+  Meter({this.id, required this.name, required this.number});
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'number': number,
+    };
+  }
+}

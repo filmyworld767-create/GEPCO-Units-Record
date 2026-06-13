@@ -1,0 +1,5 @@
+import 'package:intl/intl.dart';
+
+String getCurrentDateTime() {
+  return DateFormat('dd MMM yyyy hh:mm a').format(DateTime.now());
+}

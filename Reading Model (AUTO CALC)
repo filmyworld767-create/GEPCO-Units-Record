@@ -1,0 +1,31 @@
+class Reading {
+  int? id;
+  int meterId;
+  int previous;
+  int current;
+  String comment;
+  String dateTime;
+
+  Reading({
+    this.id,
+    required this.meterId,
+    required this.previous,
+    required this.current,
+    required this.comment,
+    required this.dateTime,
+  });
+
+  int get units => current - previous;
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'meterId': meterId,
+      'previous': previous,
+      'current': current,
+      'units': units,
+      'comment': comment,
+      'dateTime': dateTime,
+    };
+  }
+}
